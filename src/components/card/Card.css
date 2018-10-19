@@ -1,0 +1,94 @@
+.card {
+  background: white;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 320px;
+  height: 396px;
+  margin: 0.5em;
+
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+
+  padding: 1em;
+  font-size: 0.9rem;
+}
+
+.title {
+  height: 25%;
+  text-align: center;
+}
+
+.deals {
+  height: 75%;
+}
+
+.title, .deals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title > a {
+  font-weight: bolder;
+  color: black;
+  text-decoration: none;
+}
+
+.title > a:hover {
+  text-decoration: underline;
+}
+
+.deal {
+  max-width: 100%;
+  word-wrap: break-word; 
+  margin-bottom: -0.5em;
+  height: 15%;
+}
+
+.card img, .placeholder {
+  background: #eee;
+  color: #eee;
+
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  max-height: 200px;
+  min-height: 200px;
+  transition: 0.2s;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img:hover {
+  filter: saturate(1.6);
+}
+
+.card hr {
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+@media only screen and (max-width: 640px) {
+  .card {
+    flex-grow: 1;
+    margin-bottom: 3em;
+  }
+}

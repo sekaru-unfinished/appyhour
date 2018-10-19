@@ -1,0 +1,19 @@
+.header {
+  width: 100vw;
+  height: auto;
+  background: var(--primary);
+  color: white;
+}
+
+.headerContainer {
+  width: 80vw;
+  margin: 1em auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  font-size: 2rem;
+}
