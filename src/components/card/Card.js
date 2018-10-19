@@ -3,12 +3,17 @@ import './Card.css'
 import Spinner from '../spinner/Spinner'
 
 export default class Card extends Component {
+  state = {
+    imageLoaded: false
+  }
+
   render() {
     return (
       <div className="card">
         {/* Image */}
         <a href={this.props.mapLink} target="_blank" rel="noopener noreferrer">
-          {this.props.image ? <img src={this.props.image} alt={this.props.desc} /> : <div className="placeholder"><Spinner/></div>}
+          <img style={{display: this.state.imageLoaded ? "inline" : "none"}} onLoad={() => this.setState({imageLoaded: true})} src={this.props.image} alt={this.props.desc} />
+          <div style={{display: this.state.imageLoaded ? "none" : "flex"}}  className="placeholder"><Spinner/></div>
         </a>
 
         <div className="cardContent">
@@ -39,7 +44,7 @@ export default class Card extends Component {
     }
 
     return (
-      <p className="deal">{dealTime}: {deal.offer}</p>
+      <p key={dealTime + ": " + deal.offer} className="deal">{dealTime}: {deal.offer}</p>
     )
   }
 }

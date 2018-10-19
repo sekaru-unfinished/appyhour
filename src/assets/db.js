@@ -57,7 +57,7 @@ const db = [
     deals: [
       {
         offer: "2-4-1 cocktails",
-        time: "5pm-10pm"
+        time: "5pm-8pm"
       }
     ]
   },
@@ -90,6 +90,32 @@ const db = [
         offer: "2-4-£10 cocktails",
         days: "Tue-Sat",
         time: "5pm-8pm"
+      }
+    ]
+  },
+  {
+    name: "Old St Records",
+    location: "Shoreditch",
+    mapLink: "https://goo.gl/maps/KG5r28LMZso",
+    link: "https://www.oldstreetrecords.com",
+    image: "https://static.designmynight.com/uploads/2017/10/OldStRecords-LowRes-7K8B4986-optimised.jpg",
+    deals: [
+      {
+        offer: "2-4-1 cocktails",
+        time: "5pm-8pm"
+      }
+    ]
+  },
+  {
+    name: "Bar Kick",
+    location: "Shoreditch",
+    mapLink: "https://goo.gl/maps/zWEHkUBJPas",
+    link: "http://cafekick.co.uk",
+    image: "https://qbichotels.com/wp-content/uploads/2014/09/Cafe-Kick1.jpg",
+    deals: [
+      {
+        offer: "£5 cocktails and doubles, £3 glass/£12.50 bottle wine",
+        time: "4pm-7pm"
       }
     ]
   }

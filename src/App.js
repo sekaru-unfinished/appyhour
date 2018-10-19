@@ -3,10 +3,19 @@ import './App.css'
 import Header from './components/header/Header'
 import Card from './components/card/Card'
 import db from './assets/db'
+import { sortOnNow, filter } from './utils/Sorting'
 
 export default class App extends Component {
   state = {
-    search: ""
+    search: "",
+    sortMode: 0,
+    places: []
+  }
+
+  componentWillMount() {
+    let onNow = sortOnNow(db)
+    let everything = db
+    this.setState({places: [onNow, everything]})
   }
 
   render() {
@@ -26,24 +35,17 @@ export default class App extends Component {
   }
 
   renderCards() {
-    let places = db.filter(this.filter.bind(this))
+    let places = this.state.places[this.state.sortMode].filter(place => filter(this.state.search, place))
 
     return (
       <div className="cards">
         {
           places.length===0
-          ? <p>Couldn't find any places in that area</p>
-          : places.map(place => <Card {...place} />)
+          ? <p>Couldn't find anywhere :(</p>
+          : places.map(place => <Card key={place.name + ", " + place.location} {...place} />)
         }
       </div>
     )
-  }
-
-  filter(place) {
-    place.searchVal = place.location + " " + place.name
-
-    if(this.state.search.length===0) return true
-    return place.searchVal.toLowerCase().indexOf(this.state.search.toLowerCase())!==-1
   }
 
   renderSearch() {
@@ -57,9 +59,8 @@ export default class App extends Component {
   renderSort() {
     return (
       <div className="sorts">
-        <div>On now</div>
-        <div>Ending soon</div>
-        <div className="selected">Show me everything</div>
+        <div onClick={() => this.setState({sortMode: 0})} className={this.state.sortMode===0 ? "selected" : ""}>On now <span className="onNow">{this.state.places[0].length}</span></div>
+        <div onClick={() => this.setState({sortMode: 1})} className={this.state.sortMode===1 ? "selected" : ""}>Show me everything</div>
       </div>
     )
   }
