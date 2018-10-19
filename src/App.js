@@ -15,7 +15,9 @@ export default class App extends Component {
   componentWillMount() {
     let onNow = sortOnNow(db)
     let everything = db
-    this.setState({places: [onNow, everything]})
+    let sortMode = onNow.length===0 ? 1 : 0
+
+    this.setState({places: [onNow, everything], sortMode: sortMode})
   }
 
   render() {

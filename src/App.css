@@ -49,10 +49,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 .sorts > div {
-  color: var(--primary);
   width: 20vw;
   font-weight: bolder;
 
@@ -64,11 +64,12 @@
 }
 
 .sorts > div:hover {
-  text-decoration: underline;
+  color: var(--primary);
 }
 
 .selected {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  color: var(--primary);
 }
 
 .onNow {
@@ -85,4 +86,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .sorts > div {
+    width: 100%;
+  }
+
+  .sorts > div:nth-child(2) {
+    margin-top: 0.5em;
+  }
 }
