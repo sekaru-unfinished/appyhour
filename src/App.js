@@ -44,7 +44,7 @@ export default class App extends Component {
         {
           places.length===0
           ? <p>Couldn't find anywhere :(</p>
-          : places.map(place => <Card key={place.name + ", " + place.location} {...place} />)
+          : places.map(place => <Card key={place.name + ", " + place.location} {...place} sortMode={this.state.sortMode} />)
         }
       </div>
     )

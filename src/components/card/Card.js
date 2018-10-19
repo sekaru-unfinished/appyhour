@@ -22,7 +22,7 @@ export default class Card extends Component {
 
           {/* Deals */}
           <div className="deals">
-            {this.props.deals.map(this.toDeal)}  
+            {this.props.deals.map(this.toDeal.bind(this))}  
           </div>         
         </div>
       </div>
@@ -30,6 +30,8 @@ export default class Card extends Component {
   }
 
   toDeal(deal) {
+    if(!deal.relevant && this.props.sortMode===0) return null
+
     let dealTime = ""
 
     if(deal.days && deal.time) {

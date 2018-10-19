@@ -20,12 +20,15 @@ export const sortOnNow = (places) => {
         endDate.setHours(endHour, 0, 0, 0)
 
         let onNow = !isBefore(new Date(), startDate) && !isAfter(new Date(), endDate) && dayValid
-        if(onNow) sortedPlaces.push(p)
+        if(onNow) d.relevant = true
       } else {
         // no time, just a day
-        if(d.days && dayValid) sortedPlaces.push(p)          
+        if(d.days && dayValid) d.relevant = true
       }
     })
+
+    // check if any relevant deals
+    if(p.deals.find(d => d.relevant)) sortedPlaces.push(p)
   })
 
   return sortedPlaces

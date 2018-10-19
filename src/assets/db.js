@@ -118,6 +118,32 @@ const db = [
         time: "4pm-7pm"
       }
     ]
+  },
+  {
+    name: "Barrio",
+    location: "Shoreditch",
+    mapLink: "https://goo.gl/maps/QCdsufc1BE82",
+    link: "http://www.barriobars.com/shoreditch",
+    image: "http://www.barriobars.com/wp-content/uploads/2015/09/Barrio-Shoreditch-Timber-Yard-3.jpg",
+    deals: [
+      {
+        offer: "£5.50 (selected) cocktails, £5 off wine bottles",
+        time: "4pm-8pm (all day Sun-Mon)"
+      }
+    ]
+  },
+  {
+    name: "The Verge Bar",
+    location: "Shoreditch",
+    mapLink: "https://goo.gl/maps/6yJi1TrQBSF2",
+    link: "http://thevergebar.com",
+    image: "https://i.pinimg.com/originals/d6/05/8b/d6058b7361ad45a58c484eaddb2a0714.jpg",
+    deals: [
+      {
+        offer: "2-4-£12 (selected) cocktails, £14 house wine bottle, 3-4-£10 beers",
+        time: "5pm-8pm"
+      }
+    ]
   }
 ]
 
