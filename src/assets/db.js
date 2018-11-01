@@ -76,6 +76,20 @@ const db = [
     ]
   },
   {
+    name: "Balans Soho Society",
+    location: "Clapham",
+    mapLink: "https://goo.gl/maps/dUWrsHdvxcq",
+    link: "https://www.balans.co.uk/restaurant/clapham-common/",
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0f/5c/f9/64/20170523-212444-largejpg.jpg",
+    deals: [
+      {
+        offer: "2-4-1 cocktails",
+        days: "Mon-Fri",
+        time: "4pm-6pm"
+      }
+    ]
+  },
+  {
     name: "London Cocktail Club",
     location: "Shoreditch",
     mapLink: "https://goo.gl/maps/K4iCtzkhpw72",
@@ -111,7 +125,7 @@ const db = [
     location: "Shoreditch",
     mapLink: "https://goo.gl/maps/zWEHkUBJPas",
     link: "http://cafekick.co.uk",
-    image: "https://qbichotels.com/wp-content/uploads/2014/09/Cafe-Kick1.jpg",
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/1d/35/47/inside.jpg",
     deals: [
       {
         offer: "£5 cocktails and doubles, £3 glass/£12.50 bottle wine",
@@ -142,6 +156,20 @@ const db = [
       {
         offer: "2-4-£12 (selected) cocktails, £14 house wine bottle, 3-4-£10 beers",
         time: "5pm-8pm"
+      }
+    ]
+  },
+  {
+    name: "Simmons",
+    location: "Spitalfields",
+    mapLink: "https://goo.gl/maps/sE5onELAZ7P2",
+    link: "http://www.simmonsbar.co.uk/liverpool-street/4592637882",
+    image: "http://www.simmonsbar.co.uk/communities/4/004/010/198/104//images/4629830743.jpg",
+    deals: [
+      {
+        offer: "2-4-£10 cocktails, £15 cocktail teapots, £10 bottle of wine",
+        days: "Sun-Fri",
+        time: "4pm-9pm"
       }
     ]
   }
